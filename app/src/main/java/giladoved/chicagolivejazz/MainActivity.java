@@ -12,6 +12,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.SubMenu;
+
 import com.google.android.youtube.player.YouTubeBaseActivity;
 
 import giladoved.chicagolivejazz.Fragments.*;
@@ -64,6 +66,19 @@ public class MainActivity extends FragmentActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        for (int i = 0; i < navigationView.getMenu().size(); i++) {
+            MenuItem menuItem = navigationView.getMenu().getItem(i);
+            if (menuItem.hasSubMenu()) {
+                SubMenu subMenu = menuItem.getSubMenu();
+                for (int j = 0; j < subMenu.size(); j++) {
+                    MenuItem subMenuItem = subMenu.getItem(j);
+                    subMenuItem.setChecked(false);
+                }
+            } else {
+                menuItem.setChecked(false);
+            }
+        }
+
         int id = item.getItemId();
         if (id == R.id.green_mill) {
             fragmentClass = GreenMill.class;
