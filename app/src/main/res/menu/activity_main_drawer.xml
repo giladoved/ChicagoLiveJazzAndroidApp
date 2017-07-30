@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/green_mill"
-            android:title="The Green Mill" />
-    </group>
-
+    <item android:title="Clubs">
+        <menu>
+            <item
+                android:id="@+id/green_mill"
+                android:title="The Green Mill" />
+        </menu>
+    </item>
     <item android:title="Options">
         <menu>
             <item
-                android:id="@+id/settings"
-                android:title="Settings" />
+                android:id="@+id/requestclub"
+                android:title="Request a club" />
             <item
                 android:id="@+id/about"
                 android:title="About" />

@@ -1,0 +1,12 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="giladoved.chicagolivejazz.Fragments.About">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Welcome! This app will aggregate all the shows happening at the jazz clubs of Chicago to provide a simple way to choose which jazz club to go to." />
+
+</FrameLayout>
