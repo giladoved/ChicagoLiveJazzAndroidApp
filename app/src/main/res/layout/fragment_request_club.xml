@@ -48,7 +48,7 @@
             android:layout_marginTop="50dp"
             android:textSize="16sp"
             android:textColor="@color/colorText"
-            android:text="The next club currently in the process of being added is: Jazz Showcase" />
+            android:text="The next club currently in the process of being added is: Andy's Jazz Club" />
 
     </LinearLayout>
 

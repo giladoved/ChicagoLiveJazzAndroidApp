@@ -35,7 +35,7 @@
         android:layout_marginTop="5dp"
         android:textSize="16sp"
         android:textColor="@color/colorText"
-        android:text="I'm is a fellow jazz fan who just needed some help choosing which jazz club to attend." />
+        android:text="I'm a fellow jazz fan who just needed some help choosing which jazz club to attend." />
 
     <TextView
         android:layout_width="match_parent"
