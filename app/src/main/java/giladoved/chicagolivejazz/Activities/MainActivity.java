@@ -1,4 +1,4 @@
-package giladoved.chicagolivejazz;
+package giladoved.chicagolivejazz.Activities;
 
 
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import android.view.SubMenu;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 
 import giladoved.chicagolivejazz.Fragments.*;
+import giladoved.chicagolivejazz.R;
 
 public class MainActivity extends FragmentActivity
         implements NavigationView.OnNavigationItemSelectedListener {
