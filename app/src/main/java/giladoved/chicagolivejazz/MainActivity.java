@@ -82,6 +82,8 @@ public class MainActivity extends FragmentActivity
         int id = item.getItemId();
         if (id == R.id.green_mill) {
             fragmentClass = GreenMill.class;
+        } else if (id == R.id.jazz_showcase) {
+            fragmentClass = JazzShowcase.class;
         } else if (id == R.id.requestclub) {
             fragmentClass = RequestClub.class;
         } else if (id == R.id.about) {

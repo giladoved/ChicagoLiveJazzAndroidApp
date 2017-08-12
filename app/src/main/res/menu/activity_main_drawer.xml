@@ -6,6 +6,9 @@
             <item
                 android:id="@+id/green_mill"
                 android:title="The Green Mill" />
+            <item
+                android:id="@+id/jazz_showcase"
+                android:title="Jazz Showcase" />
         </menu>
     </item>
     <item android:title="Options">
