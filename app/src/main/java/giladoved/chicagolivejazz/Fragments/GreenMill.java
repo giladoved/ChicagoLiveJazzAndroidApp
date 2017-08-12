@@ -1,8 +1,10 @@
 package giladoved.chicagolivejazz.Fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -78,6 +80,12 @@ public class GreenMill extends Fragment {
                     Toast.makeText(getActivity(), "There was an error while trying to retreive show info", Toast.LENGTH_SHORT).show();
                 }
             }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject error) {
+                Toast.makeText(getActivity(), "There was an error retrieving the info for this jazz club.", Toast.LENGTH_SHORT).show();
+                Log.e("chicago-live-jazz", error.toString());
+            }
         });
 
         return view;
@@ -89,6 +97,8 @@ public class GreenMill extends Fragment {
             Bundle bundle = new Bundle();
             bundle.putParcelable("show", show);
             tabHost.addTab(tabHost.newTabSpec(show.getTime()).setIndicator(show.getTime()), ShowTemplate.class, bundle);
+            TextView tv = tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+            tv.setTextColor(ContextCompat.getColor(getActivity(), R.color.colorText));
         }
     }
 }

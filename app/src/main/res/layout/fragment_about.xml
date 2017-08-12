@@ -1,7 +1,10 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
     tools:context="giladoved.chicagolivejazz.Fragments.About">
 
     <TextView
@@ -10,7 +13,47 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:layout_marginTop="15dp"
-        android:textSize="16sp"
-        android:text="Welcome! This app will aggregate all the shows happening at the jazz clubs of Chicago to provide a simple way to choose which jazz club to go to." />
+        android:textSize="20sp"
+        android:textColor="@color/colorText"
+        android:text="Welcome!" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorText"
+        android:text="Use this app to get info about the lineup of popular jazz clubs around Chicago." />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorText"
+        android:text="I'm is a fellow jazz fan who just needed some help choosing which jazz club to attend." />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorText"
+        android:text="Please send feedback and questions!" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/welcome" />
+
+</LinearLayout>
