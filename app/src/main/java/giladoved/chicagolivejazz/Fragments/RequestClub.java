@@ -37,7 +37,7 @@ public class RequestClub extends Fragment {
         requestClubButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (requestClubEditText.getText().toString().trim().length() > 3) {
+                if (requestClubEditText.getText().toString().trim().length() > 1) {
                     Toast.makeText(getActivity(), "Thanks for your feedback! We got your request", Toast.LENGTH_SHORT).show();
                     requestClubEditText.setText("");
                     requestClubEditText.clearFocus();

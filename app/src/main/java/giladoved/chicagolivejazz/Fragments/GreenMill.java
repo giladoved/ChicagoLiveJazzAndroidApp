@@ -86,6 +86,12 @@ public class GreenMill extends Fragment {
                 Toast.makeText(getActivity(), "There was an error retrieving the info for this jazz club.", Toast.LENGTH_SHORT).show();
                 Log.e("chicago-live-jazz", error.toString());
             }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String error, Throwable throwable) {
+                Toast.makeText(getActivity(), "There was an error retrieving the info for this jazz club.", Toast.LENGTH_SHORT).show();
+                Log.e("chicago-live-jazz", error);
+            }
         });
 
         return view;
