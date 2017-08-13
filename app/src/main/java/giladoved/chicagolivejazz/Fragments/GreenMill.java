@@ -41,7 +41,7 @@ public class GreenMill extends Fragment {
     KProgressHUD loader;
 
     public GreenMill() {
-        shows = new ArrayList<>();
+
     }
 
     @Override
@@ -50,6 +50,8 @@ public class GreenMill extends Fragment {
         View view = inflater.inflate(R.layout.fragment_green_mill, container, false);
 
         API_BASE_URL = view.getContext().getString(R.string.api_base_url);
+
+        shows = new ArrayList<>();
 
         tabHost = view.findViewById(android.R.id.tabhost);
         tabHost.setup(getActivity(), getChildFragmentManager(), android.R.id.tabcontent);

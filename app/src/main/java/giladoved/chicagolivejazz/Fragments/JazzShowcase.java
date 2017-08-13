@@ -44,7 +44,7 @@ public class JazzShowcase extends Fragment {
     KProgressHUD loader;
 
     public JazzShowcase() {
-        shows = new ArrayList<>();
+
     }
 
     @Override
@@ -56,6 +56,8 @@ public class JazzShowcase extends Fragment {
 
         tabHost = view.findViewById(android.R.id.tabhost);
         tabHost.setup(getActivity(), getChildFragmentManager(), android.R.id.tabcontent);
+
+        shows = new ArrayList<>();
 
         loader = KProgressHUD.create(getActivity())
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
