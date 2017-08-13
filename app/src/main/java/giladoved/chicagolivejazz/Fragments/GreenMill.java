@@ -63,6 +63,7 @@ public class GreenMill extends Fragment {
 
         RequestQueue queue = RequestManager.getInstance(getActivity().getApplicationContext()).getRequestQueue();
         String url = API_BASE_URL + "/api/greenmill";
+        loader.show();
         JsonObjectRequest request = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                     @Override

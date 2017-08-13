@@ -10,11 +10,10 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.SubMenu;
 
-import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import giladoved.chicagolivejazz.Fragments.*;
 import giladoved.chicagolivejazz.R;
@@ -28,11 +27,15 @@ public class MainActivity extends FragmentActivity
     Class fragmentClass;
     Fragment fragment;
 
+    private FirebaseAnalytics analytics;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = findViewById(R.id.toolbar);
+
+        analytics = FirebaseAnalytics.getInstance(this);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -80,18 +83,28 @@ public class MainActivity extends FragmentActivity
             }
         }
 
+        String screen = "";
         int id = item.getItemId();
         if (id == R.id.green_mill) {
             fragmentClass = GreenMill.class;
+            screen = "greenmill";
         } else if (id == R.id.jazz_showcase) {
             fragmentClass = JazzShowcase.class;
+            screen = "jazzshowcase";
         } else if (id == R.id.requestclub) {
             fragmentClass = RequestClub.class;
+            screen = "requestclub";
         } else if (id == R.id.about) {
             fragmentClass = About.class;
+            screen = "about";
         } else {
+            screen = "splash";
             fragmentClass = Splash.class;
         }
+
+        Bundle bundle = new Bundle();
+        bundle.putString("screen", screen);
+        analytics.logEvent("select_screen", bundle);
 
         try {
             fragment = (Fragment) fragmentClass.newInstance();
