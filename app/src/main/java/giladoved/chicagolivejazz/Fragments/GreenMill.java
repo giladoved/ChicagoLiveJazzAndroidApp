@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,7 +69,6 @@ public class GreenMill extends Fragment {
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("chicago-live-jazz", response.toString());
                         try {
                             JSONArray showsJson = response.getJSONArray("events");
                             for (int i = 0; i < showsJson.length(); i++) {
@@ -100,7 +98,6 @@ public class GreenMill extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getActivity(), "There was an error retrieving the info for this jazz club.", Toast.LENGTH_SHORT).show();
-                        Log.d("chicago-live-jazz", error.toString());
                         loader.dismiss();
                     }
                 }){

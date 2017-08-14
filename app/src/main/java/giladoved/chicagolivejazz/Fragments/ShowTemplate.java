@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,8 +78,6 @@ public class ShowTemplate extends Fragment {
 
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult errorReason) {
-                String errorMessage = String.format("YouTube Error (%1$s)", errorReason.toString());
-                Log.e("chicago-live-jazz", "Error loading youtube: " + errorMessage);
                 Toast.makeText(getActivity(), "Error loading youtube video", Toast.LENGTH_SHORT).show();
             }
         });
